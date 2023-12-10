@@ -22,32 +22,7 @@ class _ViewHomeState extends State<ViewHome> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ViewFavorite(),
-                    ));
-              },
-              icon: Icon(
-                Icons.favorite,
-                color: progLangList.length ==
-                        ControllerProgLang().dataProgLang.length
-                    ? Colors.amber
-                    : Colors.white,
-              ),
-              label: Text(
-                'My Favorite (${progLangList.length})',
-                style: const TextStyle(fontSize: 24),
-                textAlign: TextAlign.center,
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
-              ),
-            ),
+            WidgetBtn(progLangList: progLangList),
             const SizedBox(height: 10),
             const Text(
               'Choose Your Favorite Programming Language:',
@@ -55,42 +30,11 @@ class _ViewHomeState extends State<ViewHome> {
             ),
             const SizedBox(height: 10),
             Expanded(
-                child: ListView.builder(
-              itemCount: progLang.length,
-              itemBuilder: (context, index) {
-                final currProgLang = progLang[index];
-                return Card(
-                  key: ValueKey(currProgLang.title),
-                  color: Colors.blue,
-                  child: ListTile(
-                    title: Text(currProgLang.title),
-                    subtitle: Text(currProgLang.desc),
-                    trailing: IconButton(
-                        onPressed: () {
-                          onPressed(progLangList, currProgLang, context);
-                        },
-                        icon: Icon(
-                          Icons.favorite,
-                          color: progLangList.contains(currProgLang)
-                              ? Colors.red
-                              : Colors.white,
-                        )),
-                  ),
-                );
-              },
-            )),
+                child: WidgetListview(
+                    progLang: progLang, progLangList: progLangList)),
           ],
         ),
       ),
     );
-  }
-
-  void onPressed(List<ModelProgLang> progLangList, ModelProgLang currProgLang,
-      BuildContext context) {
-    if (!progLangList.contains(currProgLang)) {
-      context.read<ProviderProgLang>().addToList(currProgLang);
-    } else {
-      context.read<ProviderProgLang>().removeFromList(currProgLang);
-    }
   }
 }

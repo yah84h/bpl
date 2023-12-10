@@ -13,3 +13,7 @@ part '../providers/prog_lang_provider.dart';
 
 //controller
 part '../controllers/c_prog_lang.dart';
+
+///widget
+part '../views/widgets/w_btn.dart';
+part '../views/widgets/w_listview.dart';
