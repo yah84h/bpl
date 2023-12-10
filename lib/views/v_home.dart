@@ -1,4 +1,4 @@
-part of '../import/u_import.dart';
+part of '../../utils/import/u_import.dart';
 
 class ViewHome extends StatefulWidget {
   const ViewHome({super.key});

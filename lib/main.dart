@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import './import/u_import.dart';
+import './utils/import/u_import.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<ProviderProgLang>(

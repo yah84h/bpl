@@ -1,4 +1,4 @@
-part of '../import/u_import.dart';
+part of '../../utils/import/u_import.dart';
 
 //import data
 final List<ModelProgLang> initData = ControllerProgLang().dataProgLang;

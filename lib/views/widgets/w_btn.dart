@@ -1,4 +1,4 @@
-part of '../../import/u_import.dart';
+part of '../../utils/import/u_import.dart';
 
 class WidgetBtn extends StatelessWidget {
   const WidgetBtn({
