@@ -1,7 +1,7 @@
 part of '../../utils/import/u_import.dart';
 
-class WidgetListview extends StatelessWidget {
-  const WidgetListview({
+class WidgetListviewHome extends StatelessWidget {
+  const WidgetListviewHome({
     super.key,
     required this.progLang,
     required this.progLangList,

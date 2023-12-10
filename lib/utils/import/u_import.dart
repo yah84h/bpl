@@ -16,4 +16,5 @@ part '../../controllers/c_prog_lang.dart';
 
 ///widget
 part '../../views/widgets/w_btn.dart';
-part '../../views/widgets/w_listview.dart';
+part '../../views/widgets/w_listview_home.dart';
+part '../../views/widgets/w_listview_fav.dart';
