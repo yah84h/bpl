@@ -31,7 +31,7 @@ class _ViewHomeState extends State<ViewHome> {
             const SizedBox(height: 10),
             Expanded(
                 child: WidgetListviewHome(
-                    progLang: progLang, progLangList: progLangList)),
+                    progLang: progLang, myList: progLangList)),
           ],
         ),
       ),

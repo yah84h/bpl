@@ -14,6 +14,7 @@ class WidgetListviewFavorite extends StatelessWidget {
       itemCount: progLangList.length,
       itemBuilder: (context, index) {
         final currProgLang = progLangList[index];
+
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Card(
@@ -28,7 +29,10 @@ class WidgetListviewFavorite extends StatelessWidget {
                           .read<ProviderProgLang>()
                           .removeFromList(currProgLang);
                     },
-                    child: const Text('Remove')),
+                    child: const Text(
+                      'Remove',
+                      style: TextStyle(color: Colors.red),
+                    )),
               )),
         );
       },

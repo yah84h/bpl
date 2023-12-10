@@ -4,11 +4,11 @@ class WidgetListviewHome extends StatelessWidget {
   const WidgetListviewHome({
     super.key,
     required this.progLang,
-    required this.progLangList,
+    required this.myList,
   });
 
   final List<ModelProgLang> progLang;
-  final List<ModelProgLang> progLangList;
+  final List<ModelProgLang> myList;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class WidgetListviewHome extends StatelessWidget {
             subtitle: Text(currProgLang.desc),
             trailing: IconButton(
                 onPressed: () {
-                  if (!progLangList.contains(currProgLang)) {
+                  if (!myList.contains(currProgLang)) {
                     context.read<ProviderProgLang>().addToList(currProgLang);
                   } else {
                     context
@@ -34,9 +34,8 @@ class WidgetListviewHome extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.favorite,
-                  color: progLangList.contains(currProgLang)
-                      ? Colors.red
-                      : Colors.white,
+                  color:
+                      myList.contains(currProgLang) ? Colors.red : Colors.white,
                 )),
           ),
         );
