@@ -1,7 +1,6 @@
 //imports
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../constatnt/u_prog_lang.dart';
 
 //veiws
 part '../../views/v_home.dart';
@@ -20,3 +19,6 @@ part '../../models/m_prog_lang.dart';
 part '../../views/widgets/w_btn.dart';
 part '../../views/widgets/w_listview_home.dart';
 part '../../views/widgets/w_listview_fav.dart';
+
+///utils
+part '../constatnt/u_prog_lang.dart';

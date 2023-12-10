@@ -1,3 +1,5 @@
+part of '../import/u_import.dart';
+
 class DataProgLang {
   static const String title1 = 'JavaScript';
   static const String title2 = 'Python';
